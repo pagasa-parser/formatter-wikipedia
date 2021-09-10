@@ -118,10 +118,13 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             "http://bagong.pagasa.dost.gov.ph/tropical-cyclone-bulletin-iframe"
         } PAGASA]`);
 
+        const wikitext = `<!-- Generated TyphoonsWarningTable as of ${
+            bulletin.info.issued.getUTCHours()
+        }Z -->\n` + template.toString();
         if (this.bypassRedirects)
-            return this.bypassWikitextRedirects(template.toString());
+            return this.bypassWikitextRedirects(wikitext);
         else
-            return Promise.resolve(template.toString());
+            return Promise.resolve(wikitext);
     }
 
     private async bypassWikitextRedirects(wikitext : string) : Promise<string> {
@@ -266,7 +269,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                 } ${
                     area.includes.term
                 } of ${
-                    area.includes.mainland ? `${area.includes.mainland} ` : "" 
+                    area.includes.mainland ? "mainland " : "" 
                 }${
                     wikilink(
                         this.nameTransform(province?.name ?? area.name),
