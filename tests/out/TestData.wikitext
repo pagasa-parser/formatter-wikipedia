@@ -1,0 +1,95 @@
+{{TyphoonWarningsTable
+| PHtime = 18:00 UTC (02:00 [[Philippine Standard Time|PHT]])
+| PHactive = yes
+| PH5 = * '''[[Bicol Region]]''' {{small|(Region V)}}
+** [[Albay]]
+** eastern portion of [[Camarines Sur]] {{small|([[Caramoan]], [[Presentacion]], [[Garchitorena]], [[Lagonoy]], [[Tinambac]], [[Calabanga]], [[Siruma]], [[Tigaon, Camarines Sur|Tigaon]], [[Bombon, Camarines Sur|Bombon]], [[Magarao]], [[Camaligan]], [[Gainza]], [[Canaman]], [[Milaor]], [[Naga, Camarines Sur|Naga City]], [[Minalabac]], [[Balatan]], [[Bula, Camarines Sur|Bula]], [[Pili, Camarines Sur|Pili]], [[Ocampo, Camarines Sur|Ocampo]], [[Goa, Camarines Sur|Goa]], [[San Jose, Camarines Sur|San Jose]], [[Sagñay|Sagnay]], [[Buhi, Camarines Sur|Buhi]], [[Iriga|Iriga City]], [[Baao]], [[Nabua]], [[Bato, Camarines Sur|Bato]])}}
+** [[Catanduanes]]
+| PH4 = * [[Burias (island)|Burias Island]]
+* '''[[Calabarzon|Southern Tagalog Mainland]]''' {{small|(Region IV-A/Calabarzon)}}
+** central and southern portion of [[Quezon]] {{small|([[Atimonan]], [[Padre Burgos, Quezon|Padre Burgos]], [[Agdangan]], [[Plaridel, Quezon|Plaridel]], [[Unisan, Quezon|Unisan]], [[Gumaca]], [[Pitogo, Quezon|Pitogo]], [[Macalelon]], [[Catanauan]], [[General Luna, Quezon|General Luna]], [[Mulanay]], [[San Francisco, Quezon|San Francisco]], [[San Andres, Quezon|San Andres]], [[San Narciso, Quezon|San Narciso]], [[Buenavista, Quezon|Buenavista]], [[Lopez, Quezon|Lopez]], [[Guinayangan]], [[Tagkawayan]], [[Calauag]], [[Quezon, Quezon|Quezon]], [[Alabat, Quezon|Alabat]], [[Perez, Quezon|Perez]])}}
+* '''[[Mimaropa|Southern Tagalog Region]]''' {{small|(Mimaropa)}}
+** [[Marinduque]]
+** northern portion of [[Romblon]] {{small|([[Concepcion, Romblon|Concepcion]], [[Corcuera]], [[Banton, Romblon|Banton]])}}
+* '''[[Bicol Region]]''' {{small|(Region V)}}
+** [[Camarines Norte]]
+** rest of [[Camarines Sur]]
+** northern portion of [[Sorsogon]] {{small|([[Donsol]], [[Pilar, Sorsogon|Pilar]], [[Castilla, Sorsogon|Castilla]], [[Sorsogon City]], [[Prieto Diaz]], [[Gubat]], [[Barcelona, Sorsogon|Barcelona]], [[Juban, Sorsogon|Juban]], [[Casiguran, Sorsogon|Casiguran]], [[Magallanes, Sorsogon|Magallanes]])}}
+| PH3 = * '''[[Metro Manila|National Capital Region]]''' {{small|(NCR)}}
+** [[Metro Manila]]
+* '''[[Central Luzon]]''' {{small|(Region III)}}
+** [[Bataan]]
+** [[Bulacan]]
+** [[Pampanga]]
+** southern portion of [[Zambales]] {{small|([[San Marcelino]], [[San Felipe, Zambales|San Felipe]], [[Olongapo|Olongapo City]], [[Subic, Zambales|Subic]], [[Castillejos]], [[San Antonio, Zambales|San Antonio]], [[San Narciso, Zambales|San Narciso]], [[Botolan]], [[Cabangan]])}}
+* '''[[Calabarzon|Southern Tagalog Mainland]]''' {{small|(Region IV-A/Calabarzon)}}
+** [[Batangas]]
+** [[Cavite]]
+** [[Laguna]]
+** rest of [[Quezon]]
+*** [[Polillo Island]]
+** [[Rizal]]
+* '''[[Mimaropa|Southern Tagalog Region]]''' {{small|(Mimaropa)}}
+** northern portion of [[Occidental Mindoro]] {{small|([[Sablayan]], [[Mamburao]], [[Santa Cruz, Occidental Mindoro|Santa Cruz]], [[Abra de Ilog]], [[Paluan]])}}
+*** [[Lubang Island]]
+** northern portion of [[Oriental Mindoro]] {{small|([[Bongabong]], [[Gloria, Oriental Mindoro|Gloria]], [[Bansud]], [[Pinamalayan]], [[Socorro, Oriental Mindoro|Socorro]], [[Pola, Oriental Mindoro|Pola]], [[Victoria, Oriental Mindoro|Victoria]], [[Naujan]], [[Calapan|Calapan City]], [[Baco, Oriental Mindoro|Baco]], [[San Teodoro, Oriental Mindoro|San Teodoro]], [[Puerto Galera]])}}
+** central portion of [[Romblon]] {{small|([[Calatrava, Romblon|Calatrava]], [[San Andres, Romblon|San Andres]], [[San Agustin, Romblon|San Agustin]], [[Romblon, Romblon|Romblon]], [[Magdiwang, Romblon|Magdiwang]], [[San Fernando, Romblon|San Fernando]], [[Cajidiocan]])}}
+* '''[[Bicol Region]]''' {{small|(Region V)}}
+** northern portion of [[Masbate]] {{small|([[Mobo, Masbate|Mobo]], [[Masbate City]], [[Milagros, Masbate|Milagros]], [[Uson]], [[Baleno, Masbate|Baleno]], [[Aroroy]], [[Mandaon]])}}
+*** [[Ticao Island]]
+** rest of [[Sorsogon]]
+* '''[[Eastern Visayas]]''' {{small|(Region VIII)}}
+** [[Northern Samar]]
+| PH2 = * '''[[Ilocos Region]]''' {{small|(Region I)}}
+** [[La Union]]
+** [[Pangasinan]]
+* '''[[Cordillera Administrative Region]]''' {{small|(CAR)}}
+** [[Benguet]]
+* '''[[Cagayan Valley]]''' {{small|(Region II)}}
+** [[Nueva Vizcaya]]
+** [[Quirino]]
+* '''[[Central Luzon]]''' {{small|(Region III)}}
+** [[Aurora (province)|Aurora]]
+** [[Nueva Ecija]]
+** [[Tarlac]]
+** rest of [[Zambales]]
+* '''[[Mimaropa|Southern Tagalog Region]]''' {{small|(Mimaropa)}}
+** rest of [[Occidental Mindoro]]
+** rest of [[Oriental Mindoro]]
+** rest of [[Romblon]]
+* '''[[Bicol Region]]''' {{small|(Region V)}}
+** rest of [[Masbate]]
+* '''[[Western Visayas]]''' {{small|(Region VI)}}
+** northwestern portion of [[Aklan]] {{small|([[Buruanga]], [[Malay, Aklan|Malay]], [[Nabas, Aklan|Nabas]], [[Ibajay]])}}
+** extreme northern portion of [[Antique (province)|Antique]] {{small|([[Pandan, Antique|Pandan]], [[Libertad, Antique|Libertad]], [[Caluya]])}}
+* '''[[Eastern Visayas]]''' {{small|(Region VIII)}}
+** northern portion of [[Eastern Samar]] {{small|([[San Julian, Eastern Samar|San Julian]], [[Sulat]], [[Taft, Eastern Samar|Taft]], [[Can-avid]], [[Dolores, Eastern Samar|Dolores]], [[Maslog]], [[Oras, Eastern Samar|Oras]], [[San Policarpo, Eastern Samar|San Policarpo]], [[Arteche]], [[Jipapad]])}}
+** northern portion of [[Samar (province)|Samar]] {{small|([[Catbalogan|Catbalogan City]], [[Jiabong]], [[Motiong]], [[Paranas]], [[Hinabangan]], [[San Sebastian, Samar|San Sebastian]], [[Tarangnan]], [[Pagsanghan]], [[San Jorge, Samar|San Jorge]], [[San Jose de Buan]], [[Matuguinao]], [[Gandara, Samar|Gandara]], [[Santa Margarita, Samar|Santa Margarita]], [[Calbayog|Calbayog City]], [[Santo Niño, Samar|Santo Nino]], [[Almagro, Samar|Almagro]], [[Tagapul-an]])}}
+| PH1 = * [[Calamian Islands|Calamian Island]]
+* '''[[Ilocos Region]]''' {{small|(Region I)}}
+** [[Ilocos Norte]]
+** [[Ilocos Sur]]
+* '''[[Cordillera Administrative Region]]''' {{small|(CAR)}}
+** [[Abra (province)|Abra]]
+** [[Apayao]]
+** [[Ifugao]]
+** [[Kalinga (province)|Kalinga]]
+** [[Mountain Province]]
+* '''[[Cagayan Valley]]''' {{small|(Region II)}}
+** mainland [[Cagayan]]
+** [[Isabela]]
+* '''[[Western Visayas]]''' {{small|(Region VI)}}
+** rest of [[Aklan]]
+** rest of the northern portion of [[Antique (province)|Antique]] {{small|([[Sebaste, Antique|Sebaste]], [[Culasi]], [[Tibiao]], [[Barbaza]], [[Laua-an]])}}
+** [[Capiz]]
+** northern portion of [[Iloilo]] {{small|([[Lemery, Iloilo|Lemery]], [[Sara, Iloilo|Sara]], [[Concepcion, Iloilo|Concepcion]], [[San Dionisio, Iloilo|San Dionisio]], [[Batad, Iloilo|Batad]], [[Estancia, Iloilo|Estancia]], [[Balasan]], [[Carles, Iloilo|Carles]])}}
+* '''[[Central Visayas]]''' {{small|(Region VII)}}
+** northern portion of [[Cebu]] {{small|([[San Remigio, Cebu|San Remigio]], [[Bogo, Cebu|Bogo City]], [[Medellin, Cebu|Medellin]], [[Daanbantayan]])}}
+*** [[Bantayan Island]]
+* '''[[Eastern Visayas]]''' {{small|(Region VIII)}}
+** [[Biliran]]
+** rest of [[Eastern Samar]]
+** northern portion of [[Leyte (province)|Leyte]] {{small|([[San Isidro, Leyte|San Isidro]], [[Tabango]], [[Villaba]], [[Matag-ob]], [[Palompon]], [[Ormoc|Ormoc City]], [[Pastrana, Leyte|Pastrana]], [[Palo, Leyte|Palo]], [[Calubian]], [[Leyte, Leyte|Leyte]], [[Kananga, Leyte|Kananga]], [[Capoocan]], [[Carigara]], [[Jaro, Leyte|Jaro]], [[Tunga, Leyte|Tunga]], [[Barugo]], [[Alangalang]], [[Santa Fe, Leyte|Santa Fe]], [[Tacloban|Tacloban City]], [[Babatngon]], [[San Miguel, Leyte|San Miguel]])}}
+** rest of [[Samar (province)|Samar]]
+| PHsource = [https://pubfiles.pagasa.dost.gov.ph/tamss/weather/bulletin.pdf PAGASA]
+}}
