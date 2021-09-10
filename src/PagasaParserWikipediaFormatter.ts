@@ -266,6 +266,8 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                 } ${
                     area.includes.term
                 } of ${
+                    area.includes.mainland ? `${area.includes.mainland} ` : "" 
+                }${
                     wikilink(
                         this.nameTransform(province?.name ?? area.name),
                         this.linkTransform(province?.page)
