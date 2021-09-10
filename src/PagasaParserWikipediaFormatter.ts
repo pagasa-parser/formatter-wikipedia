@@ -15,7 +15,7 @@ import StringBuilder from "./util/StringBuilder";
 import wikilink from "./util/wikilink";
 import Template from "./util/Template";
 import _package from "../package.json";
-import fetch from "node-fetch";
+import axios from "axios";
 
 export { default as ProvinceData, Province, Region } from "./ProvinceData";
 
@@ -139,22 +139,23 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         for (let offset = 0; offset < Math.ceil(links.length / queryListChunkSize); offset++) {
             const subset = links.slice(queryListChunkSize * offset, 50 + (queryListChunkSize * offset));
             try {
-                const redirectQuery = await fetch(this.apiURL, {
-                    method: "POST",
-                    body: new URLSearchParams({
+                const redirectQuery = await axios.post(
+                    this.apiURL,
+                    new URLSearchParams({
                         action: "query",
                         format: "json",
                         formatversion: "2",
                         redirects: "1",
                         titles: subset.map(v => v[1]).join("|")
                     }),
-                    headers: {
-                        "User-Agent": `${_package.name}/${_package.version}`
+                    {
+                        method: "POST",
+                        headers: {
+                            "User-Agent": `${_package.name}/${_package.version}`
+                        },
+                        responseType: "json"
                     }
-                })
-                    .then(d => d.json() as any)
-                    .then(d => d)
-                    .then(d => d["query"]["redirects"] as [{ from: string, to: string }]);
+                ).then(d => d.data["query"]["redirects"] as [{ from: string, to: string }]);
 
                 for (const redirect of redirectQuery) {
                     redirects[redirect.from] = redirect.to;
