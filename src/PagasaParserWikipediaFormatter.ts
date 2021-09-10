@@ -17,7 +17,7 @@ import Template from "./util/Template";
 import _package from "../package.json";
 import fetch from "node-fetch";
 
-export * from "./ProvinceData";
+export { default as ProvinceData, Province, Region } from "./ProvinceData";
 
 type Transformation = (text : string) => string;
 
