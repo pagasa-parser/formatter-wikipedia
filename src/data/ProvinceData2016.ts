@@ -108,7 +108,7 @@ export default new ProvinceData([
         [
             { name: "Bohol" },
             { name: "Cebu" },
-            { name: "Negros Occidental" },
+            { name: "Negros Oriental" },
             { name: "Siquijor" }
         ]
     ],
