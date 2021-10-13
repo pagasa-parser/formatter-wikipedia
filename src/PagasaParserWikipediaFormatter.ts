@@ -3,12 +3,10 @@ import {
     areaIsMainland, areaIsPart, areaIsRestOf,
     areaIsWhole, areaHasIslands,
     PagasaParserFormatter,
-    TCWSLevels
+    TCWSLevels, Bulletin, Landmass
 } from "pagasa-parser";
-import {Bulletin} from "pagasa-parser";
 import ProvinceData, {Province, Region} from "./ProvinceData";
 import ProvinceData2016 from "./data/ProvinceData2016";
-import Landmass from "pagasa-parser/build/typedefs/Area";
 import zeropad from "./util/zeropad";
 import b from "./util/b";
 import StringBuilder from "./util/StringBuilder";
