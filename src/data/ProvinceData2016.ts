@@ -163,7 +163,7 @@ export default new ProvinceData([
     [
         {
             name: "Caraga Administrative Region",
-            region: "Region XII",
+            region: "Region XIII",
             page: "Caraga"
         },
         [
