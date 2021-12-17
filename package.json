@@ -1,6 +1,6 @@
 {
     "name": "@pagasa-parser/formatter-wikipedia",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "Creates a TyphoonWarningsTable based on a pagasa-parser Bulletin.",
     "main": "build/src/PagasaParserWikipediaFormatter.js",
     "scripts": {
