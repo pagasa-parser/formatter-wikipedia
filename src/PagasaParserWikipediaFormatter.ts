@@ -97,7 +97,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             zeropad(bulletin.info.issued.getUTCMinutes(), 2)
         }`;
         const localTime = `${
-            zeropad(bulletin.info.issued.getHours(), 2)
+            zeropad((bulletin.info.issued.getUTCHours()) + 8 % 24, 2)
         }:${
             zeropad(bulletin.info.issued.getMinutes(), 2)
         }`;
