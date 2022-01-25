@@ -1,5 +1,4 @@
-import {Bulletin} from "pagasa-parser";
-import Landmass from "pagasa-parser/build/typedefs/Area";
+import {Bulletin, Landmass} from "pagasa-parser";
 
 export default <Bulletin>{
     info: {
