@@ -1,9 +1,14 @@
 import {
     Area,
-    areaIsMainland, areaIsPart, areaIsRestOf,
-    areaIsWhole, areaHasIslands,
+    areaHasIslands,
+    areaIsMainland,
+    areaIsPart,
+    areaIsRestOf,
+    areaIsWhole,
+    Bulletin,
+    Landmass,
     PagasaParserFormatter,
-    TCWSLevels, Bulletin, Landmass
+    TCWSLevels
 } from "pagasa-parser";
 import ProvinceData, {Province, Region} from "./ProvinceData";
 import ProvinceData2016 from "./data/ProvinceData2016";
@@ -30,21 +35,21 @@ interface PagasaParserWikipediaFormatterOptions {
 
 export const DefaultNameTransformations : Transformation[] = [
     // Matag-Ob => Matag-ob
-    name => name.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
+    (text: string) : string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
     // City of Ilagan => Ilagan City
-    name => name.replace(/^City of /g, ""),
+    (text: string) : string => text.replace(/^City of /g, ""),
     // Babuyan Is. => Babuyan Islands
-    name => name.replace(/Is\./, "Islands")
+    (text: string) : string => text.replace(/Is\./, "Islands")
 ];
 export const DefaultLinkTransformations : Transformation[] = [
     // Matag-Ob => Matag-ob
-    name => name.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
+    (text: string) : string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
     // City of Ilagan => Ilagan
-    name => name.replace(/^City of (.+?),/g, "$1,"),
+    (text: string) : string => text.replace(/^City of (.+?),/g, "$1,"),
     // Babuyan Is. => Babuyan Islands
-    name => name.replace(/Is\./, "Islands"),
+    (text: string) : string => text.replace(/Is\./, "Islands"),
     // Naga City => Naga
-    link => link.replace(/(\s)City(, )/gi, "$2")
+    (text: string) : string => text.replace(/(\s)City(, )/gi, "$2")
 ];
 
 export default class PagasaParserWikipediaFormatter extends PagasaParserFormatter<string> {
@@ -102,7 +107,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             zeropad(bulletin.info.issued.getMinutes(), 2)
         }`;
 
-        let template = new Template("TyphoonWarningsTable", this.block);
+        const template = new Template("TyphoonWarningsTable", this.block);
         template.set("PHtime", `${utcTime} UTC (${localTime} [[Philippine Standard Time|PHT]])`);
         if (bulletin.cyclone.prevailing ?? true)
             template.set("PHactive", "yes");
@@ -211,7 +216,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         _region?: Region,
         province?: Province
     ) : StringBuilder {
-        let serialized = new StringBuilder();
+        const serialized = new StringBuilder();
 
         const objects = (objects : string[]) : string => {
             if (objects == null || objects.length === 0) return "";
@@ -226,8 +231,8 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                         }`)
                     ))
                     .join(", ")
-            })}}`
-        }
+            })}}`;
+        };
 
         if (areaIsWhole(area)) {
             serialized.appendLine(
@@ -288,7 +293,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                             this.linkTransform(island.name)
                         )
                     }`)
-                )
+                );
             }
         }
 

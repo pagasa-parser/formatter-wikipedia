@@ -15,7 +15,7 @@ export default class ProvinceData extends Map<Region, Province[]> implements Rea
     readonly provinces : ReadonlyMap<string, Province & { region: Region }>;
 
     constructor(entries?: [Region, Province[]][]) {
-        super(...arguments);
+        super(entries);
 
         const regions = new Map<string, Region>();
         const provinces = new Map<string, Province & { region: Region }>();

@@ -1,16 +1,16 @@
 export default class StringBuilder {
 
-    static concat(a : StringBuilder, b : StringBuilder) {
+    static concat(a : StringBuilder, b : StringBuilder): StringBuilder {
         return new StringBuilder(a.toString() + b.toString());
     }
 
     constructor(private text : string = "") {}
 
-    append(text : string) {
+    append(text : string): void {
         this.text += text ?? "";
     }
 
-    appendLine(text : string) {
+    appendLine(text : string): void {
         this.text += `${text ?? ""}\n`;
     }
 
