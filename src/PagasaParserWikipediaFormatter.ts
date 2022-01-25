@@ -17,11 +17,11 @@ import b from "./util/b";
 import StringBuilder from "./util/StringBuilder";
 import wikilink from "./util/wikilink";
 import Template from "./util/Template";
-import _package from "../package.json";
 import axios from "axios";
 
 export { default as ProvinceData, Province, Region } from "./ProvinceData";
 
+const _package = require("../package.json");
 type Transformation = (text : string) => string;
 
 interface PagasaParserWikipediaFormatterOptions {
