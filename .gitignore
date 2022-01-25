@@ -12,6 +12,7 @@ legacy
 coverage
 build
 *.tgz
+tests/out
 
 # Automatically-built files
 .npmignore
