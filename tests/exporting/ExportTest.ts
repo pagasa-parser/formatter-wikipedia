@@ -10,8 +10,11 @@ describe("export test", function () {
         const json = TestData;
         const formatter = new PagasaParserWikipediaFormatter();
 
+        const outDir = path.join(__dirname, "..", "out");
+        if (!fs.existsSync(outDir))
+            fs.mkdirSync(outDir);
         fs.writeFileSync(
-            path.join(__dirname, "..", "out", "TestData.wikitext"),
+            path.join(outDir, "TestData.wikitext"),
             await formatter.format(json)
         );
     });

@@ -662,4 +662,4 @@ export default <Bulletin>{
             }
         }
     }
-}
+};
