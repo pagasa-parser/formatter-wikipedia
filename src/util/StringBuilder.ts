@@ -1,20 +1,20 @@
 export default class StringBuilder {
 
-    static concat(a : StringBuilder, b : StringBuilder): StringBuilder {
+    static concat(a: StringBuilder, b: StringBuilder): StringBuilder {
         return new StringBuilder(a.toString() + b.toString());
     }
 
-    constructor(private text : string = "") {}
+    constructor(private text: string = "") {}
 
-    append(text : string): void {
+    append(text: string): void {
         this.text += text ?? "";
     }
 
-    appendLine(text : string): void {
+    appendLine(text: string): void {
         this.text += `${text ?? ""}\n`;
     }
 
-    concat(source : StringBuilder, transform = true) : StringBuilder {
+    concat(source: StringBuilder, transform = true): StringBuilder {
         if (transform) {
             this.text += source.text;
             return this;
@@ -22,7 +22,7 @@ export default class StringBuilder {
             return StringBuilder.concat(this, source);
     }
 
-    toString() : string {
+    toString(): string {
         return this.text;
     }
 

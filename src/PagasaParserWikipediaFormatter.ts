@@ -21,8 +21,9 @@ import axios from "axios";
 
 export { default as ProvinceData, Province, Region } from "./ProvinceData";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const _package = require("../package.json");
-type Transformation = (text : string) => string;
+type Transformation = (text: string) => string;
 
 interface PagasaParserWikipediaFormatterOptions {
     block: boolean,
@@ -33,35 +34,35 @@ interface PagasaParserWikipediaFormatterOptions {
     bypassRedirects: boolean;
 }
 
-export const DefaultNameTransformations : Transformation[] = [
+export const DefaultNameTransformations: Transformation[] = [
     // Matag-Ob => Matag-ob
-    (text: string) : string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
+    (text: string): string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
     // City of Ilagan => Ilagan City
-    (text: string) : string => text.replace(/^City of /g, ""),
+    (text: string): string => text.replace(/^City of /g, ""),
     // Babuyan Is. => Babuyan Islands
-    (text: string) : string => text.replace(/Is\./, "Islands")
+    (text: string): string => text.replace(/Is\./, "Islands")
 ];
-export const DefaultLinkTransformations : Transformation[] = [
+export const DefaultLinkTransformations: Transformation[] = [
     // Matag-Ob => Matag-ob
-    (text: string) : string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
+    (text: string): string => text.replace(/-\s?([A-Z])/g, (_, a1) => `-${a1.toLowerCase()}`),
     // City of Ilagan => Ilagan
-    (text: string) : string => text.replace(/^City of (.+?),/g, "$1,"),
+    (text: string): string => text.replace(/^City of (.+?),/g, "$1,"),
     // Babuyan Is. => Babuyan Islands
-    (text: string) : string => text.replace(/Is\./, "Islands"),
+    (text: string): string => text.replace(/Is\./, "Islands"),
     // Naga City => Naga
-    (text: string) : string => text.replace(/(\s)City(, )/gi, "$2")
+    (text: string): string => text.replace(/(\s)City(, )/gi, "$2")
 ];
 
 export default class PagasaParserWikipediaFormatter extends PagasaParserFormatter<string> {
 
-    private readonly provinceData : ProvinceData;
-    private readonly block : boolean;
-    private readonly nameTransformations : Transformation[];
-    private readonly linkTransformations : Transformation[];
-    private readonly apiURL : string;
+    private readonly provinceData: ProvinceData;
+    private readonly block: boolean;
+    private readonly nameTransformations: Transformation[];
+    private readonly linkTransformations: Transformation[];
+    private readonly apiURL: string;
     private readonly bypassRedirects: boolean;
 
-    constructor(options : Partial<PagasaParserWikipediaFormatterOptions> = {}) {
+    constructor(options: Partial<PagasaParserWikipediaFormatterOptions> = {}) {
         super();
         this.provinceData = options.provinceData ?? ProvinceData2016;
         this.block = options.block ?? true;
@@ -71,7 +72,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         this.bypassRedirects = options.bypassRedirects ?? true;
     }
 
-    nameTransform(name: string) : string {
+    nameTransform(name: string): string {
         if (name == null) return null;
         let final = name;
         for (const transformation of this.nameTransformations)
@@ -79,7 +80,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         return final;
     }
 
-    linkTransform(link: string) : string {
+    linkTransform(link: string): string {
         if (link == null) return null;
         let final = link;
         for (const transformation of this.linkTransformations)
@@ -93,9 +94,9 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
     }
 
     private serialize(
-        bulletin : Bulletin,
-        signalMap : Map<keyof TCWSLevels, Map<Region, Area[]>>
-    ) : Promise<string> {
+        bulletin: Bulletin,
+        signalMap: Map<keyof TCWSLevels, Map<Region, Area[]>>
+    ): Promise<string> {
         const utcTime = `${
             zeropad(bulletin.info.issued.getUTCHours(), 2)
         }:${
@@ -130,9 +131,9 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             return Promise.resolve(wikitext);
     }
 
-    private async bypassWikitextRedirects(wikitext : string) : Promise<string> {
-        let link : RegExpExecArray;
-        const links : RegExpExecArray[] = [];
+    private async bypassWikitextRedirects(wikitext: string): Promise<string> {
+        let link: RegExpExecArray;
+        const links: RegExpExecArray[] = [];
         const linkFindRegex = /\[\[(.+?)(\|.+?)?]]/g;
 
         while ((link = linkFindRegex.exec(wikitext)) != null) {
@@ -140,7 +141,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                 links.push(link);
         }
 
-        const redirects : Record<string, string> = {};
+        const redirects: Record<string, string> = {};
         const queryListChunkSize = 50;
         for (let offset = 0; offset < Math.ceil(links.length / queryListChunkSize); offset++) {
             const subset = links.slice(queryListChunkSize * offset, 50 + (queryListChunkSize * offset));
@@ -181,7 +182,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         return wikitext;
     }
 
-    private serializeAreas(areas : Map<Region, Area[]>) : string {
+    private serializeAreas(areas: Map<Region, Area[]>): string {
         const serialized = new StringBuilder();
 
         for (const region of areas.keys()) {
@@ -211,14 +212,14 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
     }
 
     private serializeArea(
-        bullets : number,
-        area : Area,
+        bullets: number,
+        area: Area,
         _region?: Region,
         province?: Province
-    ) : StringBuilder {
+    ): StringBuilder {
         const serialized = new StringBuilder();
 
-        const objects = (objects : string[]) : string => {
+        const objects = (objects: string[]): string => {
             if (objects == null || objects.length === 0) return "";
 
             return `{{small|(${
@@ -300,7 +301,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         return serialized;
     }
 
-    private formatSignals(signals : TCWSLevels) : Map<keyof TCWSLevels, Map<Region, Area[]>> {
+    private formatSignals(signals: TCWSLevels): Map<keyof TCWSLevels, Map<Region, Area[]>> {
         const signalAreas = new Map<keyof TCWSLevels, Map<Region, Area[]>>();
 
         for (const signal in signals) {
@@ -322,7 +323,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
         return signalAreas;
     }
 
-    private formatSignalLandmassAreas(areas : Area[]) : Map<Region, Area[]> {
+    private formatSignalLandmassAreas(areas: Area[]): Map<Region, Area[]> {
         let areaList = new Map<Region, Area[]>();
 
         for (const area of areas) {

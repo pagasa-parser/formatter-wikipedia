@@ -11,8 +11,8 @@ export interface Province {
 
 export default class ProvinceData extends Map<Region, Province[]> implements ReadonlyMap<Region, Province[]> {
 
-    readonly regions : ReadonlyMap<string, Region>;
-    readonly provinces : ReadonlyMap<string, Province & { region: Region }>;
+    readonly regions: ReadonlyMap<string, Region>;
+    readonly provinces: ReadonlyMap<string, Province & { region: Region }>;
 
     constructor(entries?: [Region, Province[]][]) {
         super(entries);
