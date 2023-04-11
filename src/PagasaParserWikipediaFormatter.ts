@@ -1,8 +1,8 @@
 import {
     Area,
+    areaHasIncludes,
     areaHasIslands,
     areaIsMainland,
-    areaIsPart,
     areaIsRestOf,
     areaIsWhole,
     Bulletin,
@@ -234,13 +234,14 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                     .join(", ")
             })}}`;
         };
+        const areaObjects = areaHasIncludes(area) ? objects(area.includes.objects) : "";
 
         if (areaIsWhole(area)) {
             serialized.appendLine(
-                b(bullets, wikilink(
+                b(bullets, `${wikilink(
                     this.nameTransform(province?.name ?? area.name),
                     this.linkTransform(province?.page)
-                )).trim()
+                )} ${areaObjects}`).trim()
             );
         } else if (areaIsMainland(area)) {
             serialized.appendLine(
@@ -249,7 +250,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                         this.nameTransform(province?.name ?? area.name), 
                         this.linkTransform(province?.page)
                     )
-                }`).trim()
+                } ${areaObjects}`).trim()
             );
         } else if (areaIsRestOf(area)) {
             const rest = "rest of " + (area.includes.term ?? "");
@@ -262,26 +263,26 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                         this.nameTransform(province?.name ?? area.name), 
                         this.linkTransform(province?.page)
                     )
-                } ${
-                    objects(area.includes.objects)
-                }`).trim()
+                } ${areaObjects}`).trim()
             );
-        } else if (areaIsPart(area)) {
+        } else if (areaHasIncludes(area)) {
             serialized.appendLine(
                 b(bullets, `${
-                    area.includes.part
-                } ${
-                    area.includes.term
-                } of ${
-                    area.includes.mainland ? "mainland " : "" 
+                    area.includes.type === "section" ?
+                        `${
+                            area.includes.part
+                        } ${
+                            area.includes.term
+                        } of ${
+                            area.includes.mainland ? "mainland " : ""
+                        }}` :
+                        "part of "
                 }${
                     wikilink(
                         this.nameTransform(province?.name ?? area.name),
                         this.linkTransform(province?.page)
                     )
-                } ${
-                    objects(area.includes.objects)
-                }`).trim()
+                } ${areaObjects}`).trim()
             );
         }
 

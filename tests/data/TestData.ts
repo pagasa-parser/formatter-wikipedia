@@ -558,9 +558,7 @@ export default <Bulletin>{
                         name: "Quezon",
                         part: true,
                         includes: {
-                            type: "section",
-                            term: "portion",
-                            part: "central and southern",
+                            type: "whole",
                             objects: [
                                 "Atimonan",
                                 "Padre Burgos",
