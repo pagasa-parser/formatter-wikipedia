@@ -1,6 +1,6 @@
 {
     "name": "@pagasa-parser/formatter-wikipedia",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Creates a TyphoonWarningsTable based on a pagasa-parser Bulletin.",
     "main": "build/PagasaParserWikipediaFormatter.js",
     "types": "build/PagasaParserWikipediaFormatter.d.ts",
@@ -18,8 +18,7 @@
         "coverage": "npm run coverage:full",
         "coverage:full": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
         "coverage:minimal": "jest --coverage",
-        "reignore": "cat .gitignore > .npmignore && cat .gitignore.npmignore >> .npmignore",
-        "prepack": "npm run clean && npm run build && npm run reignore",
+        "prepack": "npm run clean && npm run build",
         "clean": "rimraf build",
         "prepare": "husky install"
     },
