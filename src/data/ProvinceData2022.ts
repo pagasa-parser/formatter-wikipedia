@@ -36,7 +36,7 @@ export default new ProvinceData([
         [
             { name: "Batanes" },
             { name: "Cagayan" },
-            { name: "Isabela" },
+            { name: "Isabela", page: "Isabela (province)" },
             { name: "Nueva Vizcaya" },
             { name: "Quirino" }
         ]
@@ -62,7 +62,7 @@ export default new ProvinceData([
         [
             { name: "Batangas" },
             { name: "Cavite" },
-            { name: "Laguna" },
+            { name: "Laguna", page: "Laguna (province)" },
             { name: "Quezon" },
             { name: "Rizal" }
         ]
@@ -180,6 +180,8 @@ export default new ProvinceData([
             { name: "Basilan" },
             { name: "Lanao del Sur" },
             { name: "Maguindanao" },
+            { name: "Maguindanao del Norte" }, // 2022
+            { name: "Maguindanao del Sur" }, // 2022
             { name: "Sulu" },
             { name: "Tawi-Tawi" }
         ]

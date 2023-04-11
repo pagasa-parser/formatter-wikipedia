@@ -11,7 +11,7 @@ import {
     TCWSLevels
 } from "pagasa-parser";
 import ProvinceData, {Province, Region} from "./ProvinceData";
-import ProvinceData2016 from "./data/ProvinceData2016";
+import ProvinceData2016 from "./data/ProvinceData2022";
 import zeropad from "./util/zeropad";
 import b from "./util/b";
 import StringBuilder from "./util/StringBuilder";
