@@ -277,7 +277,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
                             area.includes.term
                         } of ${
                             area.includes.mainland ? "mainland " : ""
-                        }}` :
+                        }` :
                         "part of "
                 }${
                     wikilink(
