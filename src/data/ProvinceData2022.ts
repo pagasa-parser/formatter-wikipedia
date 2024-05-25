@@ -64,7 +64,7 @@ export default new ProvinceData([
             { name: "Cavite" },
             { name: "Laguna", page: "Laguna (province)" },
             { name: "Quezon" },
-            { name: "Rizal" }
+            { name: "Rizal", page: "Rizal (province)" }
         ]
     ],
     [
