@@ -55,8 +55,8 @@ export default new ProvinceData([
     ],
     [
         {
-            name: "Southern Tagalog Mainland",
-            region: "Region IV-A/Calabarzon",
+            name: "Calabarzon",
+            region: "Region IV-A",
             page: "Calabarzon"
         },
         [
@@ -69,7 +69,7 @@ export default new ProvinceData([
     ],
     [
         {
-            name: "Southern Tagalog Region",
+            name: "Southernwestern Tagalog Region",
             region: "Mimaropa",
             page: "Mimaropa"
         },
