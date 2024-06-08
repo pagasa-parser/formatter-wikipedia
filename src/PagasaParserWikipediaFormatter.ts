@@ -178,7 +178,26 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             if (redirects[a1] == a2)
                 return `[[${a2}]]`;
 
-            return `[[${redirects[a1]}|${a2 ?? a1}]]`;
+            let name = a2 ?? a1;
+
+            // MOS:PHIL; https://w.wiki/AKWS
+            // If the title includes "city", use the page name as the title,
+            // removing disambiguators. This will automatically convert:
+            // * "Baguio City" to "Baguio"
+            // * "Science City of Muñoz" to "Muñoz"
+            // * "Isabela, Basilan" to "Isabela"
+            // This should exclude titles like:
+            // * Quezon City
+            // * Angeles City
+            // This should never change the redirect target.
+            if ( /\bcity\b/gi.test(name) ) {
+                name = redirects[a1].replace(
+                    /^.*City of|(,.+)|(\s\([^)]+\)+)/g,
+                    ""
+                );
+            }
+
+            return `[[${redirects[a1]}|${name}]]`;
         });
 
         return wikitext;
