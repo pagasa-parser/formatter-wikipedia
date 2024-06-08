@@ -122,7 +122,7 @@ export default class PagasaParserWikipediaFormatter extends PagasaParserFormatte
             "http://bagong.pagasa.dost.gov.ph/tropical-cyclone-bulletin-iframe"
         } PAGASA]`);
 
-        const wikitext = `<!-- Generated TyphoonsWarningTable as of (TCB#${
+        const wikitext = `<!-- pagasa-parser: Update TCWS (TCB#${
             zeropad(bulletin.info.count, 2)
         }, ${
             zeropad(bulletin.info.issued.getUTCHours(), 2)
